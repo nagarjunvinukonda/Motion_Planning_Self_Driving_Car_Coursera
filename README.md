@@ -6,12 +6,12 @@ To design a reliable motion planner, behavioral planning logic is implemented, a
 
 # Implemnetation:
 
-. Behaviour Planning Logic: used state machine that transitions between lane following, deceleration to the stop sign, staying stopped, and back to lane following, when it encounters a stop sign.
+* Behaviour Planning Logic: used state machine that transitions between lane following, deceleration to the stop sign, staying stopped, and back to lane following, when it encounters a stop sign.
 
-. Path Generation: used path optimization to compute a cubit spiral for each given goal point to ensure a confortable and efficient path. The goal points are sampled by laterally offsetting from the goal location along the direction perpendicular to the goal yaw of the ego vehicle.
+* Path Generation: used path optimization to compute a cubit spiral for each given goal point to ensure a confortable and efficient path. The goal points are sampled by laterally offsetting from the goal location along the direction perpendicular to the goal yaw of the ego vehicle.
 
-. Static Collision Checking: circle-based collision checking.
+* Static Collision Checking: circle-based collision checking.
 
-. Path Selection: eliminate paths that are in collision with static obstacles, and select path according to how closely it follows the lane centerline, and how far away it is from other paths that are in collision.
+* Path Selection: eliminate paths that are in collision with static obstacles, and select path according to how closely it follows the lane centerline, and how far away it is from other paths that are in collision.
 
-. Velocity Profile Generation: generate a linear ramp and trapezoidal velocity profiles that can handle stop signs, lead dynamic obstacles, as well as nominal lane maintenance, while integrating comfort constaints .
+* Velocity Profile Generation: generate a linear ramp and trapezoidal velocity profiles that can handle stop signs, lead dynamic obstacles, as well as nominal lane maintenance, while integrating comfort constaints .
